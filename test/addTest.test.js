@@ -4,7 +4,7 @@ function addCalculator(inputVal){
   if(inputVal === ""){
     return 0;
   }else{
-    return true;
+    return inputVal;
   }
 }
 
