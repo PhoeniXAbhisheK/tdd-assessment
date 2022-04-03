@@ -1,11 +1,16 @@
 const expect = require("chai").expect;
 
 function addCalculator(inputVal){
-  if(inputVal === ""){
-    return 0;
+  if(typeof inputVal === "string"){
+    if(inputVal === ""){
+      return 0;
+    }else{
+      return inputVal;
+    }
   }else{
-    return inputVal;
+    return false
   }
+
 }
 
 const checkConditions = (testValue, expectedResult) => {
@@ -15,8 +20,8 @@ const checkConditions = (testValue, expectedResult) => {
 
 describe("input validation suite", function(){
   it("checks if function has input", () => {
-    const result = addCalculator(1) != 0;
-    expect(result).to.equal(true);
+    const result = addCalculator(1);
+    expect(result).to.equal(false);
   })
 
   it("checks if input is blank, return zero", () => {
@@ -24,10 +29,10 @@ describe("input validation suite", function(){
   })
 
   it("checks if input is string", () => {
-    checkConditions("", "string");
+    checkConditions("", 0);
   })
 })
 
 it("checks if input is single, return input", () => {
-  checkConditions(123, 123);
+  checkConditions("123", "123");
 })
