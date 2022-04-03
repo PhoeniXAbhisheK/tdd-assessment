@@ -5,19 +5,26 @@ const addCalculator = (inputVal) => {
     if(inputVal === ""){
       return 0;
     }else{
-      let delimiter = ","
+      let delimiter = ",";
+      let containsNegative = false;
       if(inputVal.includes("//")){
         let index = inputVal.indexOf("//");
         delimiter = inputVal.charAt(index+2);
         inputVal = inputVal.replace(/\/\//ig, "");
         inputVal = inputVal.slice(1);
       }
+      containsNegative = inputVal.includes("-");
       inputVal = inputVal.replace(/\n|\\n|\/\//ig, delimiter);
       inputVal = inputVal.split(delimiter);
-      if(inputVal.length === 1){
-        return inputVal.join(delimiter);
+      if(containsNegative){
+        let negativeVals = inputVal.filter(el => parseInt(el) < 0);
+        return "negatives not allowed" + negativeVals.join(delimiter);
       }else{
-        return String(inputVal.reduce((acc, val) => acc+parseInt(val), 0));
+        if(inputVal.length === 1){
+          return inputVal.join(delimiter);
+        }else{
+          return String(inputVal.reduce((acc, val) => acc+parseInt(val), 0));
+        }
       }
     }
   }else{
