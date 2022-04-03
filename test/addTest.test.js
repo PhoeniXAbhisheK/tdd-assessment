@@ -22,6 +22,10 @@ describe("input validation suite", function(){
   it("checks if input is blank, return zero", () => {
     checkConditions("", 0);
   })
+
+  it("checks if input is string", () => {
+    checkConditions("", "string");
+  })
 })
 
 it("checks if input is single, return input", () => {
