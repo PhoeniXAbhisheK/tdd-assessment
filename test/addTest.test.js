@@ -5,7 +5,12 @@ function addCalculator(inputVal){
     if(inputVal === ""){
       return 0;
     }else{
-      return inputVal;
+      inputVal = inputVal.split(",");
+      if(inputVal.length === 1){
+        return inputVal.join(",");
+      }else{
+        return String(parseInt(inputVal[0]) + parseInt(inputVal[1]));
+      }
     }
   }else{
     return false
