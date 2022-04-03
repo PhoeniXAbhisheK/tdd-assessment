@@ -1,7 +1,7 @@
 const expect = require("chai").expect;
 
 function addCalculator(inputVal){
-  return inputVal;
+  return inputVal === "" ? 0 : inputVal;
 }
 
 it("checks if function has input", () => {
