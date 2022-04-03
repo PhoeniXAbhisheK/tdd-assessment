@@ -1,6 +1,6 @@
 const expect = require("chai").expect;
 
-function addCalculator(inputVal){
+const addCalculator = (inputVal) => {
   if(typeof inputVal === "string"){
     if(inputVal === ""){
       return 0;
