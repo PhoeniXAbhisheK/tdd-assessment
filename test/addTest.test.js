@@ -5,6 +5,6 @@ function addCalculator(){
 }
 
 it("checks if function has input", () => {
-  const result = addCalculator() != 0;
+  const result = addCalculator(1) != 0;
   expect(result).to.equal(true);
 })
