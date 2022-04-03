@@ -52,8 +52,12 @@ describe("input validation suite", () => {
     checkConditions("", 0);
   })
 
-  it("checks if input has negative numbers", () => {
+  it("checks if input has negative numbers - single", () => {
     checkConditions("123, -123", "negatives not allowed -123");
+  })
+
+  it("checks if input has negative numbers- multiple", () => {
+    checkConditions("-123, -123", "negatives not allowed -123, -123");
   })
 })
 
