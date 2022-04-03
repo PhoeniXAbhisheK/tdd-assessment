@@ -1,10 +1,10 @@
 const expect = require("chai").expect;
 
-const addCalculator = () => {
-  return true;
+function addCalculator(){
+  return [...arguments].length;
 }
 
-it("checks if function exists", () => {
-  const result = addCalculator();
+it("checks if function has input", () => {
+  const result = addCalculator() != 0;
   expect(result).to.equal(true);
 })
