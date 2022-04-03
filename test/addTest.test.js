@@ -9,7 +9,7 @@ const addCalculator = (inputVal) => {
       if(inputVal.length === 1){
         return inputVal.join(",");
       }else{
-        return String(parseInt(inputVal[0]) + parseInt(inputVal[1]));
+        return String(inputVal.reduce((acc, val) => acc+parseInt(val), 0));
       }
     }
   }else{
