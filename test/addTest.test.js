@@ -36,3 +36,7 @@ describe("input validation suite", function(){
 it("checks if input is single, return input", () => {
   checkConditions("123", "123");
 })
+
+it("checks if input is double, return sum", () => {
+  checkConditions("123, 123", "246");
+})
