@@ -13,3 +13,8 @@ it("checks if input is blank", () => {
   const result = addCalculator("");
   expect(result).to.equal("");
 })
+
+it("checks if input is blank, return zero", () => {
+  const result = addCalculator("");
+  expect(result).to.equal(0);
+})
