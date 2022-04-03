@@ -5,6 +5,7 @@ const addCalculator = (inputVal) => {
     if(inputVal === ""){
       return 0;
     }else{
+      inputVal = inputVal.replace(/\n|\\n/ig, ",");
       inputVal = inputVal.split(",");
       if(inputVal.length === 1){
         return inputVal.join(",");
