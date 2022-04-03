@@ -19,3 +19,4 @@
     ✔ checks if input contains \n, if does treat as comma and return sum
     ✔ checks if input contains custom delimiters, replace with comma, and return sum
 ```
+![image](https://user-images.githubusercontent.com/16290904/161426679-253f4a6a-97aa-4d35-9930-15bb6764eb44.png)
