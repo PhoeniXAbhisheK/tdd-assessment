@@ -57,3 +57,7 @@ it("checks if input contains \\n, if does treat as comma and return sum", () => 
   checkConditions("123\n 123, 123", "369");
 })
 
+it("checks if input contains custom delimiters, replace with comma, and return sum", () => {
+  checkConditions("//123\n 123, 123", "369");
+})
+
