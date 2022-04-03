@@ -5,10 +5,17 @@ const addCalculator = (inputVal) => {
     if(inputVal === ""){
       return 0;
     }else{
-      inputVal = inputVal.replace(/\n|\\n/ig, ",");
-      inputVal = inputVal.split(",");
+      let delimiter = ","
+      if(inputVal.includes("//")){
+        let index = inputVal.indexOf("//");
+        delimiter = inputVal.charAt(index+2);
+        inputVal = inputVal.replace(/\/\//ig, "");
+        inputVal = inputVal.slice(1);
+      }
+      inputVal = inputVal.replace(/\n|\\n|\/\//ig, delimiter);
+      inputVal = inputVal.split(delimiter);
       if(inputVal.length === 1){
-        return inputVal.join(",");
+        return inputVal.join(delimiter);
       }else{
         return String(inputVal.reduce((acc, val) => acc+parseInt(val), 0));
       }
@@ -58,6 +65,6 @@ it("checks if input contains \\n, if does treat as comma and return sum", () => 
 })
 
 it("checks if input contains custom delimiters, replace with comma, and return sum", () => {
-  checkConditions("//;123\n 123, 123", "369");
+  checkConditions("//;123; 123; 123", "369");
 })
 
