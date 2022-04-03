@@ -1,7 +1,7 @@
 const expect = require("chai").expect;
 
-function addCalculator(){
-  return [...arguments].length;
+function addCalculator(inputVal){
+  return inputVal;
 }
 
 it("checks if function has input", () => {
@@ -10,6 +10,6 @@ it("checks if function has input", () => {
 })
 
 it("checks if input is blank", () => {
-  const result = addCalculator(1) != 0;
+  const result = addCalculator("");
   expect(result).to.equal("");
 })
