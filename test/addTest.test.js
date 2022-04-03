@@ -23,7 +23,7 @@ const checkConditions = (testValue, expectedResult) => {
   expect(result).to.equal(expectedResult);
 };
 
-describe("input validation suite", function(){
+describe("input validation suite", () => {
   it("checks if function has input", () => {
     const result = addCalculator(1);
     expect(result).to.equal(false);
@@ -38,10 +38,12 @@ describe("input validation suite", function(){
   })
 })
 
-it("checks if input is single, return input", () => {
-  checkConditions("123", "123");
-})
-
-it("checks if input is double, return sum", () => {
-  checkConditions("123, 123", "246");
-})
+describe("input addition suite", () => {
+  it("checks if input is single, return input", () => {
+    checkConditions("123", "123");
+  })
+  
+  it("checks if input is double, return sum", () => {
+    checkConditions("123, 123", "246");
+  })
+});
