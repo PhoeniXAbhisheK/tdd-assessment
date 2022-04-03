@@ -1,7 +1,11 @@
 const expect = require("chai").expect;
 
 function addCalculator(inputVal){
-  return inputVal === "" ? 0 : inputVal;
+  if(inputVal === ""){
+    return 0;
+  }else{
+    return true;
+  }
 }
 
 const checkConditions = (testValue, expectedResult) => {
@@ -20,7 +24,6 @@ describe("input validation suite", function(){
   })
 })
 
-it("checks if input is blank, return zero", () => {
-  const result = addCalculator("");
-  expect(result).to.equal(0);
+it("checks if input is single, return input", () => {
+  checkConditions(123, 123);
 })
