@@ -44,6 +44,10 @@ describe("input validation suite", () => {
   it("checks if input is string", () => {
     checkConditions("", 0);
   })
+
+  it("checks if input has negative numbers", () => {
+    checkConditions("123, -123", "negatives not allowed");
+  })
 })
 
 describe("input addition suite", () => {
