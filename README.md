@@ -4,4 +4,5 @@
  - Open terminal of your choice and run command `npm run test`.
  - If everything is in place, you should be able to see o/p as below
 
-![image](https://user-images.githubusercontent.com/16290904/161426679-253f4a6a-97aa-4d35-9930-15bb6764eb44.png)
+![image](https://user-images.githubusercontent.com/16290904/161428429-96155e17-9dee-4593-8e94-98b9b708e8ab.png)
+
