@@ -18,7 +18,8 @@ const addCalculator = (inputVal) => {
       inputVal = inputVal.split(delimiter);
       if(containsNegative){
         let negativeVals = inputVal.filter(el => parseInt(el) < 0);
-        return "negatives not allowed" + negativeVals.join(delimiter);
+        let resultStr = negativeVals.length == 1 ? "negatives not allowed" + negativeVals.join(delimiter) : "negatives not allowed " + negativeVals.join(delimiter);
+        return resultStr;
       }else{
         if(inputVal.length === 1){
           return inputVal.join(delimiter);
