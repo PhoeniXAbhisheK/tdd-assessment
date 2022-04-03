@@ -1,4 +1,4 @@
-##Steps to run the project.
+# Steps to run the project.
  - Checkout the repository locally.
  - Run `npm install` to download any missing dependencies.
  - Open terminal of your choice and run command `npm run test`.
