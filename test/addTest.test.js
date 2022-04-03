@@ -46,4 +46,8 @@ describe("input addition suite", () => {
   it("checks if input is double, return sum", () => {
     checkConditions("123, 123", "246");
   })
+
+  it("checks if input is longer than 2, return sum", () => {
+    checkConditions("123, 123, 123", "369");
+  })
 });
